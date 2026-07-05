@@ -82,4 +82,6 @@ def health():
 if __name__ == '__main__':
     print("🚀 Receiver Server Starting...")
     print(f"📁 users.json should be in same folder")
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    # ⬇️ SIRF YEH 2 LINES CHANGE HUI HAIN
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
